@@ -10,7 +10,7 @@ source:
   sha256: e745146bd52d1167020064acae3398484878f2e6cbb63dcfd0aff927d1821fcb
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Categorized requirements
