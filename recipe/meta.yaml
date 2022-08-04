@@ -210,11 +210,11 @@ outputs:
         - tiled.queries
         - tiled.query_registration
         - tiled.scopes
+        - tiled.serialization.image_serializer_helpers
         - tiled.server
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.dataframe
-        - tiled.structures.image_serializer_helpers
         - tiled.structures.node
         - tiled.structures.xarray
         - tiled.utils
