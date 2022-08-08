@@ -219,7 +219,6 @@ outputs:
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.dataframe
-        - tiled.structures.sparse
         - tiled.utils
       commands:
         - pip check
