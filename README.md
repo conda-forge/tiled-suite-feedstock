@@ -249,6 +249,6 @@ Feedstock Maintainers
 =====================
 
 * [@danielballan](https://github.com/danielballan/)
-* [@gbischof](https://github.com/gbischof/)
+* [@gwbischof](https://github.com/gwbischof/)
 * [@mrakitin](https://github.com/mrakitin/)
 

@@ -210,13 +210,15 @@ outputs:
         - tiled.queries
         - tiled.query_registration
         - tiled.scopes
+        - tiled.serialization.array
+        - tiled.serialization.dataframe
+        - tiled.serialization.image_serializer_helpers
+        - tiled.serialization.node
+        - tiled.serialization.xarray
         - tiled.server
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.dataframe
-        - tiled.structures.image_serializer_helpers
-        - tiled.structures.node
-        - tiled.structures.xarray
         - tiled.utils
       commands:
         - pip check
@@ -237,5 +239,5 @@ about:
 extra:
   recipe-maintainers:
     - danielballan
-    - gbischof
+    - gwbischof
     - mrakitin
