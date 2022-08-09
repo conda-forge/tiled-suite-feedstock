@@ -210,7 +210,7 @@ outputs:
         - tiled.adapters.xarray
         - tiled.authenticators
         - tiled.client
-        - tiled.client.sparse
+        # - tiled.client.sparse
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
