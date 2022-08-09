@@ -37,6 +37,16 @@ outputs:
         - numpy
         - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
 
+  - name: tiled-sparse
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ndindex
+        - pyarrow
+        - sparse >=0.13.0
+        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+
   - name: tiled-dataframe
     build:
       noarch: generic
@@ -89,6 +99,7 @@ outputs:
         - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
         - {{ pin_subpackage('tiled-xarray', exact=True) }}
         - {{ pin_subpackage('tiled-compression', exact=True) }}
+        - {{ pin_subpackage('tiled-sparse', exact=True) }}
     test:
       imports:
         - tiled
@@ -103,6 +114,7 @@ outputs:
         - tiled.client.node
         - tiled.client.utils
         - tiled.client.xarray
+        # - tiled.client.sparse
       commands:
         - tiled --help
 
@@ -137,6 +149,7 @@ outputs:
         - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
         - {{ pin_subpackage('tiled-xarray', exact=True) }}
         - {{ pin_subpackage('tiled-compression', exact=True) }}
+        - {{ pin_subpackage('tiled-sparse', exact=True) }}
     test:
       imports:
         - tiled
@@ -177,7 +190,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('tiled-client', exact=True) }}
-        # tiled-server is the only noarch output, so we cannot do exact pinning
+        # tiled-server is the only arch dependant output, so we cannot do exact pinning
         # because there are multiple variants.
         - {{ pin_subpackage('tiled-server', max_pin='x.x.x') }}
         - {{ pin_subpackage('tiled-formats', exact=True) }}
@@ -197,6 +210,7 @@ outputs:
         - tiled.adapters.xarray
         - tiled.authenticators
         - tiled.client
+        # - tiled.client.sparse
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
@@ -215,10 +229,13 @@ outputs:
         - tiled.serialization.image_serializer_helpers
         - tiled.serialization.node
         - tiled.serialization.xarray
+        - tiled.serialization.sparse
         - tiled.server
+        - tiled.server.pydantic_sparse
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.dataframe
+        - tiled.structures.sparse
         - tiled.utils
       commands:
         - pip check
