@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0a66" %}
+{% set version = "0.1.0a67" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: 5e2dc9d368d1106ea5402c2601781ea8b3c3449ed84492df9ec688b0c484772f
+  sha256: bdf7b136759bc3b2db58824ac5480c931d824e82216013e70280b3549c6af8c2
 
 build:
   number: 0
@@ -35,6 +35,16 @@ outputs:
       run:
         - dask
         - numpy
+        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+
+  - name: tiled-sparse
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - ndindex
+        - pyarrow
+        - sparse >=0.13.0
         - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
 
   - name: tiled-dataframe
@@ -89,6 +99,7 @@ outputs:
         - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
         - {{ pin_subpackage('tiled-xarray', exact=True) }}
         - {{ pin_subpackage('tiled-compression', exact=True) }}
+        - {{ pin_subpackage('tiled-sparse', exact=True) }}
     test:
       imports:
         - tiled
@@ -103,6 +114,7 @@ outputs:
         - tiled.client.node
         - tiled.client.utils
         - tiled.client.xarray
+        # - tiled.client.sparse
       commands:
         - tiled --help
 
@@ -137,6 +149,7 @@ outputs:
         - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
         - {{ pin_subpackage('tiled-xarray', exact=True) }}
         - {{ pin_subpackage('tiled-compression', exact=True) }}
+        - {{ pin_subpackage('tiled-sparse', exact=True) }}
     test:
       imports:
         - tiled
@@ -177,7 +190,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('tiled-client', exact=True) }}
-        # tiled-server is the only noarch output, so we cannot do exact pinning
+        # tiled-server is the only arch dependant output, so we cannot do exact pinning
         # because there are multiple variants.
         - {{ pin_subpackage('tiled-server', max_pin='x.x.x') }}
         - {{ pin_subpackage('tiled-formats', exact=True) }}
@@ -197,6 +210,7 @@ outputs:
         - tiled.adapters.xarray
         - tiled.authenticators
         - tiled.client
+        # - tiled.client.sparse
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
@@ -215,10 +229,13 @@ outputs:
         - tiled.serialization.image_serializer_helpers
         - tiled.serialization.node
         - tiled.serialization.xarray
+        - tiled.serialization.sparse
         - tiled.server
+        - tiled.server.pydantic_sparse
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.dataframe
+        - tiled.structures.sparse
         - tiled.utils
       commands:
         - pip check
