@@ -44,7 +44,7 @@ outputs:
       run:
         - ndindex
         - pyarrow
-        - sparse
+        - sparse >=0.13.0
         - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
 
   - name: tiled-dataframe
@@ -84,7 +84,7 @@ outputs:
         - msgpack-python >=1.0.0
         - pyyaml
         - typer
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+        - {{ pin_subpackag`e('tiled-base', max_pin='x.x.x') }}
 
   # End-user packages
   - name: tiled-client
