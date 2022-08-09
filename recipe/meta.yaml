@@ -114,8 +114,8 @@ outputs:
         - tiled.client.node
         - tiled.client.utils
         - tiled.client.xarray
-        - tiled.client.sparse
-      commands:
+        # - tiled.client.sparse
+    commands:
         - tiled --help
 
   - name: tiled-server
