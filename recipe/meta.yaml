@@ -39,6 +39,7 @@ outputs:
 
   - name: tiled-sparse
     build:
+      noarch: generic
     requirements:
       run:
         - ndindex
@@ -48,6 +49,7 @@ outputs:
 
   - name: tiled-dataframe
     build:
+      noarch: generic
     requirements:
       run:
         - pandas
@@ -56,6 +58,7 @@ outputs:
 
   - name: tiled-xarray
     build:
+      noarch: generic
     requirements:
       run:
         - xarray
@@ -64,6 +67,7 @@ outputs:
 
   - name: tiled-compression
     build:
+      noarch: generic
     requirements:
       run:
         - blosc
@@ -72,6 +76,7 @@ outputs:
 
   - name: tiled-minimal-base
     build:
+      noarch: generic
     requirements:
       run:
         - click !=8.1.0
@@ -84,6 +89,7 @@ outputs:
   # End-user packages
   - name: tiled-client
     build:
+      noarch: generic
     requirements:
       run:
         - appdirs
@@ -164,6 +170,7 @@ outputs:
 
   - name: tiled-formats
     build:
+      noarch: generic
     requirements:
       run:
         - h5py
@@ -179,6 +186,7 @@ outputs:
   # All:
   - name: tiled
     build:
+      noarch: generic
     requirements:
       run:
         - {{ pin_subpackage('tiled-client', exact=True) }}
