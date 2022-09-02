@@ -132,6 +132,7 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--formats-green.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--minimal--base-green.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--server-green.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--sparse-green.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--xarray-green.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) |
 
 Installing tiled-suite
@@ -144,16 +145,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `tiled, tiled-array, tiled-base, tiled-client, tiled-compression, tiled-dataframe, tiled-formats, tiled-minimal-base, tiled-server, tiled-xarray` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `tiled, tiled-array, tiled-base, tiled-client, tiled-compression, tiled-dataframe, tiled-formats, tiled-minimal-base, tiled-server, tiled-sparse, tiled-xarray` can be installed with `conda`:
 
 ```
-conda install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-xarray
+conda install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-sparse tiled-xarray
 ```
 
 or with `mamba`:
 
 ```
-mamba install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-xarray
+mamba install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-sparse tiled-xarray
 ```
 
 It is possible to list all of the versions of `tiled` available on your platform with `conda`:
