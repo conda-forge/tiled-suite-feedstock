@@ -240,7 +240,6 @@ outputs:
       commands:
         - pip check
         - tiled --help
-        - pytest --pyargs tiled._tests  # [not win]
       requires:
         - pip
         - pytest  # [not win]
