@@ -104,7 +104,6 @@ outputs:
       imports:
         - tiled
         - tiled.client
-        - tiled.client._async_bridge
         - tiled.client.array
         - tiled.client.base
         - tiled.client.cache
@@ -197,7 +196,6 @@ outputs:
     test:
       imports:
         - tiled
-        - tiled._version
         - tiled.adapters
         - tiled.adapters.array
         - tiled.adapters.dataframe
