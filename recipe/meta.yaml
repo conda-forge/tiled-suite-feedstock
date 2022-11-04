@@ -23,83 +23,34 @@ outputs:
         - tiled = tiled.commandline.main:main
     requirements:
       host:
-        - python
-        - pip
-      run:
-        - python
-
-  - name: tiled-array
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - dask
-        - numpy
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
-
-  - name: tiled-sparse
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - ndindex
-        - pyarrow
-        - sparse >=0.13.0
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
-
-  - name: tiled-dataframe
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - pandas
-        - pyarrow
-        - {{ pin_subpackage('tiled-array', exact=True) }}
-
-  - name: tiled-xarray
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - xarray
-        - {{ pin_subpackage('tiled-dataframe', exact=True) }}
-
-
-  - name: tiled-compression
-    build:
-      noarch: generic
-    requirements:
-      run:
+        - appdirs
         - blosc
-        - lz4
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
-
-  - name: tiled-minimal-base
-    build:
-      noarch: generic
-    requirements:
-      run:
         - click !=8.1.0
+        - dask
         - jsonschema
+        - lz4
         - msgpack-python >=1.0.0
+        - ndindex
+        - numpy
+        - pandas
+        - pip
+        - pyarrow
+        - pyarrow
+        - python
         - pyyaml
+        - sparse >=0.13.0
         - typer
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+        - xarray
+        - zstandard
 
-  # End-user packages
   - name: tiled-client
     build:
       noarch: generic
     requirements:
       run:
-        - appdirs
         - entrypoints
         - heapdict
-        - httpx >=0.20.0
-        - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
-        - {{ pin_subpackage('tiled-xarray', exact=True) }}
-        - {{ pin_subpackage('tiled-compression', exact=True) }}
-        - {{ pin_subpackage('tiled-sparse', exact=True) }}
+        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
     test:
       imports:
         - tiled
@@ -111,9 +62,9 @@ outputs:
         - tiled.client.context
         - tiled.client.dataframe
         - tiled.client.node
+        - tiled.client.sparse
         - tiled.client.utils
         - tiled.client.xarray
-        # - tiled.client.sparse
       commands:
         - tiled --help
 
@@ -135,6 +86,7 @@ outputs:
         - jinja2
         - jmespath
         - orjson
+        - packaging
         - psutil
         - prometheus_client
         - pydantic >=1.8.2
@@ -142,13 +94,11 @@ outputs:
         - python-jose
         - python-multipart
         - sqlalchemy
+        - starlette
         - toolz
         - uvicorn
         - watchgod
-        - {{ pin_subpackage('tiled-minimal-base', exact=True) }}
-        - {{ pin_subpackage('tiled-xarray', exact=True) }}
-        - {{ pin_subpackage('tiled-compression', exact=True) }}
-        - {{ pin_subpackage('tiled-sparse', exact=True) }}
+        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
     test:
       imports:
         - tiled
