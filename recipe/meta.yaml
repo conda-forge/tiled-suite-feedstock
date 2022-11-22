@@ -18,15 +18,16 @@ outputs:
     script: build-tiled.sh  # [unix]
     script: bld-tiled.bat  # [win]
     build:
+      noarch: generic
       # TODO: Make noarch when tiled-server is noarch
       entry_points:
         - tiled = tiled.commandline.main:main
     requirements:
       host:
-        - python
+        - python >=3.8
         - pip
       run:
-        - python
+        - python >=3.8
         - appdirs
         - blosc
         - click !=8.1.0
@@ -51,7 +52,7 @@ outputs:
       run:
         - entrypoints
         - heapdict
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+        - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
         - tiled
@@ -70,14 +71,14 @@ outputs:
         - tiled --help
 
   - name: tiled-server
+    build:
+      noarch: generic
     requirements:
       run:
         - aiofiles
         - alembic
         - anyio
         - cachey
-        # TODO: Can be noarch when Python 3.7 is EOL in June 2023
-        - cached-property  # [py<38]
         - cachetools
         - dask
         - fastapi
@@ -96,7 +97,7 @@ outputs:
         - toolz
         - uvicorn
         - watchgod
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+        - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
         - tiled
@@ -125,7 +126,7 @@ outputs:
         - openpyxl
         - pillow
         - tifffile
-        - {{ pin_subpackage('tiled-base', max_pin='x.x.x') }}
+        - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
         - tiled
@@ -137,9 +138,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('tiled-client', exact=True) }}
-        # tiled-server is the only arch dependant output, so we cannot do exact pinning
-        # because there are multiple variants.
-        - {{ pin_subpackage('tiled-server', max_pin='x.x.x') }}
+        - {{ pin_subpackage('tiled-server', exact=True) }}
         - {{ pin_subpackage('tiled-formats', exact=True) }}
     test:
       imports:
