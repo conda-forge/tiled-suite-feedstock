@@ -18,7 +18,7 @@ outputs:
     script: build-tiled.sh  # [unix]
     script: bld-tiled.bat  # [win]
     build:
-      noarch: generic
+      noarch: python
       # TODO: Make noarch when tiled-server is noarch
       entry_points:
         - tiled = tiled.commandline.main:main
@@ -47,7 +47,7 @@ outputs:
 
   - name: tiled-client
     build:
-      noarch: generic
+      noarch: python
     requirements:
       run:
         - entrypoints
@@ -73,7 +73,7 @@ outputs:
 
   - name: tiled-server
     build:
-      noarch: generic
+      noarch: python
     requirements:
       run:
         - aiofiles
@@ -119,7 +119,7 @@ outputs:
 
   - name: tiled-formats
     build:
-      noarch: generic
+      noarch: python
     requirements:
       run:
         - h5py
@@ -135,7 +135,7 @@ outputs:
   # All:
   - name: tiled
     build:
-      noarch: generic
+      noarch: python
     requirements:
       run:
         - {{ pin_subpackage('tiled-client', exact=True) }}
