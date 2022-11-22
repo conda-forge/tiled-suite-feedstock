@@ -23,6 +23,10 @@ outputs:
         - tiled = tiled.commandline.main:main
     requirements:
       host:
+        - python
+        - pip
+      run:
+        - python
         - appdirs
         - blosc
         - click !=8.1.0
@@ -33,10 +37,7 @@ outputs:
         - ndindex
         - numpy
         - pandas
-        - pip
         - pyarrow
-        - pyarrow
-        - python
         - pyyaml
         - sparse >=0.13.0
         - typer
@@ -70,10 +71,7 @@ outputs:
 
   - name: tiled-server
     requirements:
-      host:
-        - python
       run:
-        - python
         - aiofiles
         - alembic
         - anyio
