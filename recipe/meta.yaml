@@ -52,6 +52,7 @@ outputs:
       run:
         - entrypoints
         - heapdict
+        - httpx
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
