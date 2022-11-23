@@ -13,107 +13,11 @@ Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=linux&configuration=linux_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=linux&configuration=linux_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=osx&configuration=osx_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=win&configuration=win_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=win&configuration=win_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=win&configuration=win_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main&jobName=win&configuration=win_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16559&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tiled-suite-feedstock?branchName=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -124,16 +28,10 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled-green.svg)](https://anaconda.org/conda-forge/tiled) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled.svg)](https://anaconda.org/conda-forge/tiled) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled.svg)](https://anaconda.org/conda-forge/tiled) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled.svg)](https://anaconda.org/conda-forge/tiled) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--array-green.svg)](https://anaconda.org/conda-forge/tiled-array) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-array.svg)](https://anaconda.org/conda-forge/tiled-array) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-array.svg)](https://anaconda.org/conda-forge/tiled-array) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-array.svg)](https://anaconda.org/conda-forge/tiled-array) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--base-green.svg)](https://anaconda.org/conda-forge/tiled-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-base.svg)](https://anaconda.org/conda-forge/tiled-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-base.svg)](https://anaconda.org/conda-forge/tiled-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-base.svg)](https://anaconda.org/conda-forge/tiled-base) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--client-green.svg)](https://anaconda.org/conda-forge/tiled-client) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-client.svg)](https://anaconda.org/conda-forge/tiled-client) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-client.svg)](https://anaconda.org/conda-forge/tiled-client) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-client.svg)](https://anaconda.org/conda-forge/tiled-client) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--compression-green.svg)](https://anaconda.org/conda-forge/tiled-compression) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-compression.svg)](https://anaconda.org/conda-forge/tiled-compression) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-compression.svg)](https://anaconda.org/conda-forge/tiled-compression) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-compression.svg)](https://anaconda.org/conda-forge/tiled-compression) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--dataframe-green.svg)](https://anaconda.org/conda-forge/tiled-dataframe) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-dataframe.svg)](https://anaconda.org/conda-forge/tiled-dataframe) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-dataframe.svg)](https://anaconda.org/conda-forge/tiled-dataframe) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-dataframe.svg)](https://anaconda.org/conda-forge/tiled-dataframe) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--formats-green.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-formats.svg)](https://anaconda.org/conda-forge/tiled-formats) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--minimal--base-green.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-minimal-base.svg)](https://anaconda.org/conda-forge/tiled-minimal-base) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--server-green.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-server.svg)](https://anaconda.org/conda-forge/tiled-server) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--sparse-green.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-sparse.svg)](https://anaconda.org/conda-forge/tiled-sparse) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-tiled--xarray-green.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tiled-xarray.svg)](https://anaconda.org/conda-forge/tiled-xarray) |
 
 Installing tiled-suite
 ======================
@@ -145,16 +43,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `tiled, tiled-array, tiled-base, tiled-client, tiled-compression, tiled-dataframe, tiled-formats, tiled-minimal-base, tiled-server, tiled-sparse, tiled-xarray` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `tiled, tiled-base, tiled-client, tiled-formats, tiled-server` can be installed with `conda`:
 
 ```
-conda install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-sparse tiled-xarray
+conda install tiled tiled-base tiled-client tiled-formats tiled-server
 ```
 
 or with `mamba`:
 
 ```
-mamba install tiled tiled-array tiled-base tiled-client tiled-compression tiled-dataframe tiled-formats tiled-minimal-base tiled-server tiled-sparse tiled-xarray
+mamba install tiled tiled-base tiled-client tiled-formats tiled-server
 ```
 
 It is possible to list all of the versions of `tiled` available on your platform with `conda`:
