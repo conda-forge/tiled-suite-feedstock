@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0a77" %}
+{% set version = "0.1.0a79" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: 6137ac57ef2b70638fdc485b9fe016070f8c21b3fa0cd5d25d348cb8fe73c67b
+  sha256: 5abe6758eef5ead7e62fea52165c27b72d4cb8a4ab3aa4b8a2096ba6301e91fb
 
 build:
   number: 0
@@ -32,6 +32,7 @@ outputs:
         - blosc
         - click !=8.1.0
         - dask
+        - httpx >=0.20.0
         - jsonschema
         - lz4
         - msgpack-python >=1.0.0
@@ -52,7 +53,6 @@ outputs:
       run:
         - entrypoints
         - heapdict
-        - httpx
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
