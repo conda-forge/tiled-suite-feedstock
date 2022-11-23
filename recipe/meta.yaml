@@ -32,6 +32,7 @@ outputs:
         - blosc
         - click !=8.1.0
         - dask
+        - httpx >=0.20.0
         - jsonschema
         - lz4
         - msgpack-python >=1.0.0
@@ -52,7 +53,6 @@ outputs:
       run:
         - entrypoints
         - heapdict
-        - httpx
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
