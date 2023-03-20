@@ -1,11 +1,11 @@
-About tiled-suite
-=================
+About tiled-suite-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tiled-suite-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/bluesky/tiled
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tiled-suite-feedstock/blob/main/LICENSE.txt)
 
 Summary: Tile-based access to SciPy/PyData data structures over the web in many formats
 
