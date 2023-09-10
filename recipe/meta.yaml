@@ -27,6 +27,7 @@ outputs:
         - python >=3.8
         - pip
         - hatchling
+        - hatch-vcs
       run:
         - python >=3.8
         - appdirs
