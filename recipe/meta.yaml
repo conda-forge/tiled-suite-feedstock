@@ -175,17 +175,18 @@ outputs:
         - tiled.query_registration
         - tiled.scopes
         - tiled.serialization.array
-        - tiled.serialization.dataframe
+        - tiled.serialization.container
         - tiled.serialization.image_serializer_helpers
-        - tiled.serialization.node
-        - tiled.serialization.xarray
         - tiled.serialization.sparse
+        - tiled.serialization.table
+        - tiled.serialization.xarray
         - tiled.server
         - tiled.server.pydantic_sparse
         - tiled.structures
         - tiled.structures.array
-        - tiled.structures.dataframe
+        - tiled.structures.core
         - tiled.structures.sparse
+        - tiled.structures.table
         - tiled.utils
       commands:
         - pip check
