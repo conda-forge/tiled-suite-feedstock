@@ -158,16 +158,17 @@ outputs:
         - tiled.adapters.utils
         - tiled.adapters.xarray
         - tiled.authenticators
+        - tiled.authn_database
+        - tiled.authn_database.alembic_constants
+        - tiled.authn_database.base
+        - tiled.authn_database.connection_pool
+        - tiled.authn_database.core
+        - tiled.authn_database.orm
         - tiled.client
-        # - tiled.client.sparse
+        - tiled.client.sparse
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
-        - tiled.database
-        - tiled.database.alembic_utils
-        - tiled.database.base
-        - tiled.database.core
-        - tiled.database.orm
         - tiled.media_type_registration
         - tiled.profiles
         - tiled.queries
