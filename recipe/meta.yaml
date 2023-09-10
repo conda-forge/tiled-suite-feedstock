@@ -91,7 +91,7 @@ outputs:
         - packaging
         - psutil
         - prometheus_client
-        - pydantic >=1.8.2
+        - pydantic >=1.8.2,<2
         - python-dateutil
         - python-jose
         - python-multipart
