@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0a96" %}
+{% set version = "0.1.0a106" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: cd99e97db4b2234ff7467d61081a0e14985b728b6bc24ec535188e3a43f5abf2
+  sha256: cc8a3717efdee26429de83cb2054663c66f1a9c11087463f5d5a50c022db2282
 
 build:
   number: 0
@@ -26,6 +26,8 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - hatchling
+        - hatch-vcs
       run:
         - python >=3.8
         - appdirs
@@ -85,11 +87,13 @@ outputs:
         - fastapi
         - jinja2
         - jmespath
+        - openpyxl
         - orjson
         - packaging
+        - pandas
         - psutil
         - prometheus_client
-        - pydantic >=1.8.2
+        - pydantic >=1.8.2,<2
         - python-dateutil
         - python-jose
         - python-multipart
@@ -148,40 +152,41 @@ outputs:
         - tiled.adapters.array
         - tiled.adapters.dataframe
         - tiled.adapters.excel
-        - tiled.adapters.files
         - tiled.adapters.hdf5
         - tiled.adapters.mapping
         - tiled.adapters.tiff
         - tiled.adapters.utils
         - tiled.adapters.xarray
         - tiled.authenticators
+        - tiled.authn_database
+        - tiled.authn_database.alembic_constants
+        - tiled.authn_database.base
+        - tiled.authn_database.connection_pool
+        - tiled.authn_database.core
+        - tiled.authn_database.orm
         - tiled.client
-        # - tiled.client.sparse
+        - tiled.client.sparse
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
-        - tiled.database
-        - tiled.database.alembic_utils
-        - tiled.database.base
-        - tiled.database.core
-        - tiled.database.orm
         - tiled.media_type_registration
         - tiled.profiles
         - tiled.queries
         - tiled.query_registration
         - tiled.scopes
         - tiled.serialization.array
-        - tiled.serialization.dataframe
+        - tiled.serialization.container
         - tiled.serialization.image_serializer_helpers
-        - tiled.serialization.node
-        - tiled.serialization.xarray
         - tiled.serialization.sparse
+        - tiled.serialization.table
+        - tiled.serialization.xarray
         - tiled.server
         - tiled.server.pydantic_sparse
         - tiled.structures
         - tiled.structures.array
-        - tiled.structures.dataframe
+        - tiled.structures.core
         - tiled.structures.sparse
+        - tiled.structures.table
         - tiled.utils
       commands:
         - pip check
