@@ -87,8 +87,10 @@ outputs:
         - fastapi
         - jinja2
         - jmespath
+        - openpyxl
         - orjson
         - packaging
+        - pandas
         - psutil
         - prometheus_client
         - pydantic >=1.8.2,<2
