@@ -152,7 +152,6 @@ outputs:
         - tiled.adapters.array
         - tiled.adapters.dataframe
         - tiled.adapters.excel
-        - tiled.adapters.files
         - tiled.adapters.hdf5
         - tiled.adapters.mapping
         - tiled.adapters.tiff
