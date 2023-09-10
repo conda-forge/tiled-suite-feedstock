@@ -26,6 +26,7 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - hatchling
       run:
         - python >=3.8
         - appdirs
