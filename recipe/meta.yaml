@@ -81,6 +81,7 @@ outputs:
         - aiofiles
         - alembic
         - anyio
+        - asgi-correlation-id
         - cachey
         - cachetools
         - dask
