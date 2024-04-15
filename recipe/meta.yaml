@@ -55,6 +55,7 @@ outputs:
       run:
         - entrypoints
         - heapdict
+        - starlette
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
