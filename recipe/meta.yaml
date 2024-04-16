@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0a116" %}
+{% set version = "0.1.0a117" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: a5e0fa9991c78740f619950e9308cf471f88ee560bae0bae73c2a36a817dcce2
+  sha256: afcb1de8c4d6190b94adf3a7532959eb6280309555918e8b9b25f9b0c95fd5aa
 
 build:
   number: 0
@@ -55,6 +55,7 @@ outputs:
       run:
         - entrypoints
         - heapdict
+        - starlette  # TODO: remove in the next release v0.1.0a118+
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
@@ -94,7 +95,8 @@ outputs:
         - pandas
         - psutil
         - prometheus_client
-        - pydantic >=1.8.2,<2
+        - pydantic >=2,<3
+        - pydantic-settings >=2,<3
         - python-dateutil
         - python-jose
         - python-multipart
