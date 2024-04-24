@@ -31,15 +31,16 @@ outputs:
       run:
         - python >=3.8
         - appdirs
-        - blosc
+        - awkward
+        - blosc2
         - click !=8.1.0
         - dask
-        - httpx >=0.20.0
         - jsonschema
         - lz4
         - msgpack-python >=1.0.0
         - ndindex
         - numpy
+        - orjson
         - pandas
         - pyarrow
         - pyyaml
@@ -54,14 +55,15 @@ outputs:
     requirements:
       run:
         - entrypoints
-        - heapdict
-        - starlette  # TODO: remove in the next release v0.1.0a118+
+        - httpx >=0.20.0
+        - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
         - tiled
         - tiled.client
         - tiled.client.array
+        - tiled.client.awkward
         - tiled.client.base
         - tiled.client.cache
         - tiled.client.constructors
@@ -80,20 +82,19 @@ outputs:
     requirements:
       run:
         - aiofiles
+        - aiosqlite
         - alembic
         - anyio
+        - asyncpg
         - asgi-correlation-id
-        - cachey
         - cachetools
-        - dask
+        - canonicaljson
         - fastapi
         - jinja2
         - jmespath
         - openpyxl
-        - orjson
         - packaging
-        - pandas
-        - psutil
+        - parquet
         - prometheus_client
         - pydantic >=2,<3
         - pydantic-settings >=2,<3
@@ -104,7 +105,8 @@ outputs:
         - starlette
         - toolz
         - uvicorn
-        - watchgod
+        - watchfiles
+        - zarr
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
@@ -116,7 +118,6 @@ outputs:
         - tiled.server.core
         - tiled.server.dependencies
         - tiled.server.etag
-        - tiled.server.object_cache
         - tiled.server.router
         - tiled.server.schemas
         - tiled.server.settings
@@ -153,10 +154,13 @@ outputs:
         - tiled
         - tiled.adapters
         - tiled.adapters.array
+        - tiled.adapters.awkward
         - tiled.adapters.dataframe
         - tiled.adapters.excel
         - tiled.adapters.hdf5
         - tiled.adapters.mapping
+        - tiled.adapters.resource_cache
+        - tiled.adapters.sparse
         - tiled.adapters.tiff
         - tiled.adapters.utils
         - tiled.adapters.xarray
