@@ -88,7 +88,7 @@ outputs:
         - asyncpg
         - asgi-correlation-id
         - cachetools
-        - canonicaljson
+        # - canonicaljson  # This needs to be packaged for conda-forge.
         - fastapi
         - jinja2
         - jmespath
