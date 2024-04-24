@@ -94,7 +94,6 @@ outputs:
         - jmespath
         - openpyxl
         - packaging
-        - parquet
         - prometheus_client
         - pydantic >=2,<3
         - pydantic-settings >=2,<3
