@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0a117" %}
+{% set version = "0.1.0a118" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: afcb1de8c4d6190b94adf3a7532959eb6280309555918e8b9b25f9b0c95fd5aa
+  sha256: d04ba60496d9f6ed78b22dd43db9a00a7cd0895ff73a69b44223a2b47b3f43ab
 
 build:
   number: 0
@@ -31,7 +31,8 @@ outputs:
       run:
         - python >=3.8
         - appdirs
-        - blosc
+        - awkward
+        - python-blosc2
         - click !=8.1.0
         - dask
         - httpx >=0.20.0
@@ -40,6 +41,7 @@ outputs:
         - msgpack-python >=1.0.0
         - ndindex
         - numpy
+        - orjson
         - pandas
         - pyarrow
         - pyyaml
@@ -54,14 +56,14 @@ outputs:
     requirements:
       run:
         - entrypoints
-        - heapdict
-        - starlette  # TODO: remove in the next release v0.1.0a118+
+        - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
         - tiled
         - tiled.client
         - tiled.client.array
+        - tiled.client.awkward
         - tiled.client.base
         - tiled.client.cache
         - tiled.client.constructors
@@ -80,20 +82,18 @@ outputs:
     requirements:
       run:
         - aiofiles
+        - aiosqlite
         - alembic
         - anyio
+        - asyncpg
         - asgi-correlation-id
-        - cachey
         - cachetools
-        - dask
+        # - canonicaljson  # This needs to be packaged for conda-forge.
         - fastapi
         - jinja2
         - jmespath
         - openpyxl
-        - orjson
         - packaging
-        - pandas
-        - psutil
         - prometheus_client
         - pydantic >=2,<3
         - pydantic-settings >=2,<3
@@ -104,7 +104,8 @@ outputs:
         - starlette
         - toolz
         - uvicorn
-        - watchgod
+        - watchfiles
+        - zarr
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       imports:
@@ -116,7 +117,6 @@ outputs:
         - tiled.server.core
         - tiled.server.dependencies
         - tiled.server.etag
-        - tiled.server.object_cache
         - tiled.server.router
         - tiled.server.schemas
         - tiled.server.settings
@@ -153,10 +153,13 @@ outputs:
         - tiled
         - tiled.adapters
         - tiled.adapters.array
+        - tiled.adapters.awkward
         - tiled.adapters.dataframe
         - tiled.adapters.excel
         - tiled.adapters.hdf5
         - tiled.adapters.mapping
+        - tiled.adapters.resource_cache
+        - tiled.adapters.sparse
         - tiled.adapters.tiff
         - tiled.adapters.utils
         - tiled.adapters.xarray
