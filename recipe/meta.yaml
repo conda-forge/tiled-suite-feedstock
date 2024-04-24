@@ -35,6 +35,7 @@ outputs:
         - python-blosc2
         - click !=8.1.0
         - dask
+        - httpx >=0.20.0
         - jsonschema
         - lz4
         - msgpack-python >=1.0.0
@@ -55,7 +56,6 @@ outputs:
     requirements:
       run:
         - entrypoints
-        - httpx >=0.20.0
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
