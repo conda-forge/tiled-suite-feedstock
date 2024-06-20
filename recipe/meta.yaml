@@ -57,6 +57,7 @@ outputs:
       run:
         - entrypoints
         - json-merge-patch
+        - jsonpatch
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
