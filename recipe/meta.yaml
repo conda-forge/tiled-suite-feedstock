@@ -32,10 +32,11 @@ outputs:
         - python >=3.8
         - appdirs
         - awkward
-        - python-blosc2
         - click !=8.1.0
         - dask
         - httpx >=0.20.0
+        - json-merge-patch
+        - jsonpatch
         - jsonschema
         - lz4
         - msgpack-python >=1.0.0
@@ -44,6 +45,7 @@ outputs:
         - orjson
         - pandas
         - pyarrow
+        - python-blosc2
         - pyyaml
         - sparse >=0.13.0
         - typer
@@ -56,8 +58,6 @@ outputs:
     requirements:
       run:
         - entrypoints
-        - json-merge-patch
-        - jsonpatch
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
