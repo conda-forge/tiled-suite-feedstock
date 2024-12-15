@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
   sha256: 293c148b0a793dd4f079a6f54456bd9edc41d932347a2b62dd679cb694ff342b
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Categorized requirements
@@ -24,12 +24,12 @@ outputs:
         - tiled = tiled.commandline.main:main
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip
         - hatchling
         - hatch-vcs
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - appdirs
         - awkward
         - click !=8.1.0
@@ -61,6 +61,8 @@ outputs:
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
         - tiled.client
@@ -110,6 +112,8 @@ outputs:
         - zarr
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
         - tiled.server
@@ -138,6 +142,8 @@ outputs:
         - tifffile
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
 
@@ -204,6 +210,7 @@ outputs:
         - pytest  # [not win]
         # broken build of httpcore package fails pipcheck
         - httpcore !=0.13.3
+        - python {{ python_min }}
 
 about:
   home: https://github.com/bluesky/tiled
