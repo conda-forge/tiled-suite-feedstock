@@ -58,6 +58,7 @@ outputs:
     requirements:
       run:
         - entrypoints
+        - platformdirs
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
