@@ -10,7 +10,7 @@ source:
   sha256: 8c11c5091bd700408df4fa694f65b3aa4aac57a822bb1c8b697a9f272a8a5a5a
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Categorized requirements
@@ -91,7 +91,7 @@ outputs:
         - asyncpg
         - asgi-correlation-id
         - cachetools
-        # - canonicaljson  # This needs to be packaged for conda-forge.
+        - canonicaljson
         - fastapi
         - jinja2
         - jmespath
