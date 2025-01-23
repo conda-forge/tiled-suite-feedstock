@@ -24,12 +24,12 @@ outputs:
         - tiled = tiled.commandline.main:main
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip
         - hatchling
         - hatch-vcs
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - appdirs
         - awkward
         - click !=8.1.0
@@ -62,6 +62,8 @@ outputs:
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
         - tiled.client
@@ -111,6 +113,8 @@ outputs:
         - zarr
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
         - tiled.server
@@ -139,6 +143,8 @@ outputs:
         - tifffile
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - tiled
 
@@ -205,6 +211,7 @@ outputs:
         - pytest  # [not win]
         # broken build of httpcore package fails pipcheck
         - httpcore !=0.13.3
+        - python {{ python_min }}
 
 about:
   home: https://github.com/bluesky/tiled
