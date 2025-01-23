@@ -51,6 +51,11 @@ outputs:
         - typer
         - xarray
         - zstandard
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - tiled
 
   - name: tiled-client
     build:
