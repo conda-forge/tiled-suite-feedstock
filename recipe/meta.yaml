@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0b16" %}
+{% set version = "0.1.0b17" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: 0aa41fffe761645b0f19dd4a2423f4e837fe83c172132d75d4d60baf7e9335e6
+  sha256: 7ad4f601f344d9fba620b585194657a9e02bfe71c136ae589a98cb31324d2ded
 
 build:
   number: 0
@@ -59,6 +59,7 @@ outputs:
       run:
         - entrypoints
         - platformdirs
+        - pydantic
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
