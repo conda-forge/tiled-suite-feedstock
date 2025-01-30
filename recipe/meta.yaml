@@ -10,7 +10,7 @@ source:
   sha256: 7ad4f601f344d9fba620b585194657a9e02bfe71c136ae589a98cb31324d2ded
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Categorized requirements
@@ -51,12 +51,20 @@ outputs:
         - typer
         - xarray
         - zstandard
+    test:
+      requires:
+        - python {{ python_min }}
+      imports:
+        - tiled
 
   - name: tiled-client
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - entrypoints
         - platformdirs
         - pydantic
@@ -86,7 +94,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - aiofiles
         - aiosqlite
         - alembic
@@ -136,7 +147,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - h5py
         - h5netcdf
         - openpyxl
@@ -154,7 +168,10 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('tiled-client', exact=True) }}
         - {{ pin_subpackage('tiled-server', exact=True) }}
         - {{ pin_subpackage('tiled-formats', exact=True) }}
@@ -208,11 +225,11 @@ outputs:
         - pip check
         - tiled --help
       requires:
+        - python {{ python_min }}
         - pip
         - pytest  # [not win]
         # broken build of httpcore package fails pipcheck
         - httpcore !=0.13.3
-        - python {{ python_min }}
 
 about:
   home: https://github.com/bluesky/tiled
