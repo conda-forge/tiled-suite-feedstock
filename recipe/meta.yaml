@@ -59,6 +59,7 @@ outputs:
       run:
         - entrypoints
         - platformdirs
+        - pydantic
         - rich
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
