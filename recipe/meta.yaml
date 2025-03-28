@@ -153,6 +153,7 @@ outputs:
         - python >={{ python_min }}
         - h5py
         - h5netcdf
+        - hdf5plugin
         - openpyxl
         - pillow
         - tifffile
