@@ -215,7 +215,6 @@ outputs:
         - tiled.serialization.table
         - tiled.serialization.xarray
         - tiled.server
-        - tiled.server.pydantic_sparse
         - tiled.structures
         - tiled.structures.array
         - tiled.structures.core
