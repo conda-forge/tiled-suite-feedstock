@@ -68,8 +68,8 @@ outputs:
         - entrypoints
         - platformdirs
         - pydantic
-        - stamina
         - rich
+        - stamina
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       requires:
