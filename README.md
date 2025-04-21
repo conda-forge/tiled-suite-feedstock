@@ -151,6 +151,3 @@ Feedstock Maintainers
 * [@gwbischof](https://github.com/gwbischof/)
 * [@mrakitin](https://github.com/mrakitin/)
 
-
-<!-- dummy commit to enable rerendering -->
-
