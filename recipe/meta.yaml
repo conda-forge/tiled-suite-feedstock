@@ -109,7 +109,6 @@ outputs:
         - asgi-correlation-id
         - cachetools
         - canonicaljson
-        - duckdb
         - fastapi
         - jinja2
         - jmespath
