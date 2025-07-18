@@ -97,7 +97,7 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - adbc-driver-duckdb
+        - python-duckdb
         - adbc-driver-manager
         - adbc-driver-postgresql
         - adbc-driver-sqlite
