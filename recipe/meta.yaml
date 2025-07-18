@@ -88,8 +88,6 @@ outputs:
         - tiled.client.sparse
         - tiled.client.utils
         - tiled.client.xarray
-      commands:
-        - tiled --help
 
   - name: tiled-server
     build:
