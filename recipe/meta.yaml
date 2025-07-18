@@ -99,6 +99,10 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
+        - adbc-driver-duckdb
+        - adbc-driver-manager
+        - adbc-driver-postgresql
+        - adbc-driver-sqlite
         - aiofiles
         - aiosqlite
         - alembic
@@ -107,6 +111,7 @@ outputs:
         - asgi-correlation-id
         - cachetools
         - canonicaljson
+        - duckdb
         - fastapi
         - jinja2
         - jmespath
@@ -119,6 +124,7 @@ outputs:
         - python-jose
         - python-multipart
         - sqlalchemy
+        - stamina
         - starlette
         - toolz
         - uvicorn
