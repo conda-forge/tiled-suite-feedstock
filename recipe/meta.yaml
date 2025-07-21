@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.0b29" %}
+{% set version = "0.1.0b30" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: ab392102c25d6d6cde55ef1e1b922a7281c3bfc502b985997523f9a638098828
+  sha256: aed9439d63005fc57e16f623d59a3fa237c32033958511ed70509f26a29706a4
 
 build:
   number: 0
@@ -88,8 +88,6 @@ outputs:
         - tiled.client.sparse
         - tiled.client.utils
         - tiled.client.xarray
-      commands:
-        - tiled --help
 
   - name: tiled-server
     build:
@@ -99,6 +97,10 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
+        - python-duckdb
+        - adbc-driver-manager
+        - adbc-driver-postgresql
+        - adbc-driver-sqlite
         - aiofiles
         - aiosqlite
         - alembic
@@ -119,6 +121,7 @@ outputs:
         - python-jose
         - python-multipart
         - sqlalchemy
+        - stamina
         - starlette
         - toolz
         - uvicorn
@@ -243,3 +246,4 @@ extra:
     - danielballan
     - gwbischof
     - mrakitin
+    - tacaswell
