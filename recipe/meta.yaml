@@ -213,7 +213,7 @@ outputs:
         - tiled.profiles
         - tiled.queries
         - tiled.query_registration
-        - tiled.scopes
+        - tiled.access_control
         - tiled.serialization.array
         - tiled.serialization.container
         - tiled.serialization.image_serializer_helpers
