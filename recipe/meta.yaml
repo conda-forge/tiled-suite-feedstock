@@ -206,6 +206,7 @@ outputs:
         - tiled.authn_database.orm
         - tiled.client
         - tiled.client.sparse
+        - tiled.client.stream
         - tiled.commandline
         - tiled.commandline.main
         - tiled.config
