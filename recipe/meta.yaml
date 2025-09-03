@@ -70,6 +70,7 @@ outputs:
         - pydantic
         - rich
         - stamina
+        - websockets
         - {{ pin_subpackage('tiled-base', exact=True) }}
     test:
       requires:
@@ -120,6 +121,7 @@ outputs:
         - python-dateutil
         - python-jose
         - python-multipart
+        - redis-py
         - sqlalchemy
         - stamina
         - starlette
