@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.6" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: b3b96598bb7537d5901ce1bb2182d76d7b2093497eeb2e61632c3966fd31ccf6
+  sha256: 020badea9e8d85c4695ae077036a867ca691e06ac5ebcd44bdac064b67527cce
 
 build:
   number: 0
@@ -201,7 +201,6 @@ outputs:
         - tiled.authn_database
         - tiled.authn_database.alembic_constants
         - tiled.authn_database.base
-        - tiled.authn_database.connection_pool
         - tiled.authn_database.core
         - tiled.authn_database.orm
         - tiled.client
@@ -224,6 +223,7 @@ outputs:
         - tiled.server
         - tiled.structures
         - tiled.structures.array
+        - tiled.server.connection_pool
         - tiled.structures.core
         - tiled.structures.sparse
         - tiled.structures.table
