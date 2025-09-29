@@ -201,7 +201,6 @@ outputs:
         - tiled.authn_database
         - tiled.authn_database.alembic_constants
         - tiled.authn_database.base
-        - tiled.authn_database.connection_pool
         - tiled.authn_database.core
         - tiled.authn_database.orm
         - tiled.client
@@ -224,6 +223,7 @@ outputs:
         - tiled.server
         - tiled.structures
         - tiled.structures.array
+        - tiled.server.connection_pool
         - tiled.structures.core
         - tiled.structures.sparse
         - tiled.structures.table
