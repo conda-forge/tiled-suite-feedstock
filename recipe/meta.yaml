@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: 020badea9e8d85c4695ae077036a867ca691e06ac5ebcd44bdac064b67527cce
+  sha256: b012260a23242eef81dfbd06e0fdc97bb2f5b1cfaad01c34d55f5b2d1be2228a
 
 build:
   number: 0
@@ -98,7 +98,7 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - python-duckdb
+        - python-duckdb <1.4.0
         - adbc-driver-manager
         - adbc-driver-postgresql
         - adbc-driver-sqlite
@@ -113,6 +113,8 @@ outputs:
         - fastapi
         - jinja2
         - jmespath
+        - minio
+        - obstore
         - openpyxl
         - packaging
         - prometheus_client
@@ -124,7 +126,7 @@ outputs:
         - redis-py
         - sqlalchemy
         - stamina
-        - starlette
+        - starlette >=0.48.0
         - toolz
         - uvicorn
         - watchfiles
