@@ -10,7 +10,7 @@ source:
   sha256: b012260a23242eef81dfbd06e0fdc97bb2f5b1cfaad01c34d55f5b2d1be2228a
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Categorized requirements
@@ -45,6 +45,7 @@ outputs:
         - orjson
         - pandas
         - pyarrow
+        - pydantic-settings >=2,<3
         - python-blosc2
         - pyyaml
         - sparse >=0.13.0
@@ -119,7 +120,6 @@ outputs:
         - packaging
         - prometheus_client
         - pydantic >=2,<3
-        - pydantic-settings >=2,<3
         - python-dateutil
         - python-jose
         - python-multipart
