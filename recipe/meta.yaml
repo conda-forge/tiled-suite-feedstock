@@ -45,7 +45,7 @@ outputs:
         - orjson
         - pandas
         - pyarrow
-        - pydantic-settings >=2,<3
+        - pydantic-settings >=2,<2.12.0
         - python-blosc2
         - pyyaml
         - sparse >=0.13.0
@@ -111,7 +111,7 @@ outputs:
         - asgi-correlation-id
         - cachetools
         - canonicaljson
-        - fastapi
+        - fastapi >=0.122.0
         - jinja2
         - jmespath
         - minio
