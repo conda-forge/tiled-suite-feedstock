@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: b3cc7537a19bf086fadb8f97e7467309a06a4fc57bb78ae892a74ed3c37c5a09
+  sha256: 7ba9bbd00eedb050e57bbc3371c44d7048f8dc8dc078072d6a26a97d677928ed
 
 build:
   number: 0
