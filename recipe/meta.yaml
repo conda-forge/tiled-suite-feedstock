@@ -48,6 +48,7 @@ outputs:
         - pydantic-settings >=2,<2.12.0
         - python-blosc2
         - pyyaml
+        - ragged
         - sparse >=0.13.0
         - typer
         - xarray
@@ -87,6 +88,7 @@ outputs:
         - tiled.client.context
         - tiled.client.dataframe
         - tiled.client.node
+        - tiled.client.ragged
         - tiled.client.sparse
         - tiled.client.utils
         - tiled.client.xarray
@@ -206,6 +208,7 @@ outputs:
         - tiled.authn_database.core
         - tiled.authn_database.orm
         - tiled.client
+        - tiled.client.ragged
         - tiled.client.sparse
         - tiled.client.stream
         - tiled.commandline
