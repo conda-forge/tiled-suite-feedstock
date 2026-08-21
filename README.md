@@ -44,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `tiled, tiled-base, tiled-client, tiled-formats, tiled-server` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install tiled tiled-base tiled-client tiled-formats tiled-server
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install tiled tiled-base tiled-client tiled-formats tiled-server
 ```
 
-It is possible to list all of the versions of `tiled` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add tiled tiled-base tiled-client tiled-formats tiled-server
+# for installing globally
+pixi global install tiled tiled-base tiled-client tiled-formats tiled-server
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `tiled` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search tiled --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search tiled --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search tiled --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -80,6 +122,8 @@ mamba repoquery whoneeds tiled --channel conda-forge
 # List dependencies of `tiled`:
 mamba repoquery depends tiled --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
