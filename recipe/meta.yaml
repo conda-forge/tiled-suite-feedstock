@@ -129,6 +129,7 @@ outputs:
         - sqlalchemy
         - stamina
         - starlette >=0.48.0
+        - strawberry-graphql >=0.315.3
         - toolz
         - uvicorn
         - watchfiles
