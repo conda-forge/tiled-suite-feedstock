@@ -193,6 +193,7 @@ Feedstock Maintainers
 =====================
 
 * [@danielballan](https://github.com/danielballan/)
+* [@genematx](https://github.com/genematx/)
 * [@gwbischof](https://github.com/gwbischof/)
 * [@mrakitin](https://github.com/mrakitin/)
 * [@tacaswell](https://github.com/tacaswell/)
