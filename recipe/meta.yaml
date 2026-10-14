@@ -46,6 +46,7 @@ outputs:
         - pandas
         - pyarrow
         - pydantic-settings >=2,<2.12.0
+        - pyjwt
         - python-blosc2
         - pyyaml
         - ragged
