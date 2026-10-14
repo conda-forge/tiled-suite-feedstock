@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.2.18" %}
+{% set version = "0.2.19" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: 2f3943260c46824b162796fcb8a43c3d02f41205e2ccefc64e365b18b6ec1e27
+  sha256: 2977bcf8cbfad66de0c5bc6aeebef0599c804c5af27d8f09b4322418bdfabca8
 
 build:
   number: 0
@@ -46,6 +46,7 @@ outputs:
         - pandas
         - pyarrow
         - pydantic-settings >=2,<2.12.0
+        - pyjwt
         - python-blosc2
         - pyyaml
         - ragged
@@ -126,7 +127,7 @@ outputs:
         - python-jose
         - python-multipart
         - redis-py
-        - sqlalchemy
+        - sqlalchemy-with-asyncio
         - stamina
         - starlette >=0.48.0
         - strawberry-graphql >=0.315.3
