@@ -34,7 +34,7 @@ outputs:
         - awkward
         - click !=8.1.0
         - dask
-        - httpx >=0.20.0
+        - httpx2 >=2.0.0
         - json-merge-patch
         - jsonpatch
         - jsonschema
