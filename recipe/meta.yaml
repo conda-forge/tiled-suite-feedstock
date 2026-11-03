@@ -1,5 +1,5 @@
 {% set name = "tiled" %}
-{% set version = "0.2.20" %}
+{% set version = "0.2.21" %}
 
 package:
   name: tiled-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tiled-{{ version }}.tar.gz
-  sha256: b7d977c9a02dcea5506e7ba738e675ae767689b93e91fecff1175f67d09c55d0
+  sha256: ba36a7ce96391a10dfdeff08b0962bccf346ec515a20fe1df8b7ef983d12acaa
 
 build:
   number: 0
@@ -34,7 +34,7 @@ outputs:
         - awkward
         - click !=8.1.0
         - dask
-        - httpx >=0.20.0
+        - httpx2 >=2.0.0
         - json-merge-patch
         - jsonpatch
         - jsonschema
