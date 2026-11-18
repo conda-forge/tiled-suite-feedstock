@@ -195,5 +195,6 @@ Feedstock Maintainers
 * [@genematx](https://github.com/genematx/)
 * [@gwbischof](https://github.com/gwbischof/)
 * [@mrakitin](https://github.com/mrakitin/)
+* [@nmaytan](https://github.com/nmaytan/)
 * [@tacaswell](https://github.com/tacaswell/)
 
