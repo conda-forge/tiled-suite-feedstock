@@ -15,8 +15,7 @@ build:
 outputs:
   # Categorized requirements
   - name: tiled-base
-    script: build-tiled.sh  # [unix]
-    script: bld-tiled.bat  # [win]
+    script: build-tiled.sh
     build:
       noarch: python
       # TODO: Make noarch when tiled-server is noarch
